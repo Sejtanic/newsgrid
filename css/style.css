@@ -1,0 +1,244 @@
+:root{
+    --primary-color:#c72727;
+    --secondary-color:#f99500;
+    --light-color:#f3f3f3;
+    --dark-color:#333;
+    --max-width:1100px;
+}
+.category{
+    --sport-color:#f99500;
+    --ent-color:#a66bbe;
+    --tech-color:#009cff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    background-color: var(--light-color );
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+img{
+    width: 100%;
+}
+/* utility */
+.container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+.category {
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: white;
+}
+.sport{background: var(--sport-color);}
+.ent{background-color: var(--ent-color);}
+.tech{background-color: var(--tech-color);}
+/* button */
+.btn{
+color: white;
+background: #333;
+padding: 10px 20px;
+margin-top: 20px;
+border-radius: 10px;
+transition: all 0.3s;
+}
+.btn:hover{
+    background:rgb(77, 76, 76);
+
+}
+.card{
+    background: white;
+    padding: 10px;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap:10px; */
+}
+
+.meta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(230, 226, 226);
+    margin: 10px 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/* navigation */
+.main-nav{
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    
+}
+
+.main-nav .container{
+    display: grid;
+    grid-template-columns: 6fr 3fr 2fr;
+    align-items: center;
+}
+.main-nav .logo{
+    width: 180px;
+}
+.main-nav ul{
+    justify-self: end;
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr;
+}
+.main-nav ul a{
+    font-weight: bold;
+    padding: 20px;
+}
+.main-nav ul a:hover{
+    background-color: var(--light-color);
+}
+.main-nav .social{
+    display: flex;
+}
+.main-nav .social i {
+    justify-self: center;
+    color: rgb(83, 83, 83);
+    padding: 0 15px;
+}
+/* showcase */
+.showcase {
+   background: #333;
+    color: white;
+    position: relative;
+    
+}
+.showcase:before {
+    content: '';
+    background: url('../image_resources/featured.jpg')no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+
+}
+.showcase .showcase-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    
+    height: 50vh;
+}
+.showcase .showcase-text{
+    z-index: 1;
+}
+.showcase .showcase-text p{
+    margin-bottom: 20px;
+}
+/* article */
+.article{
+    padding: 20px;
+    background: silver;
+}
+.article .container{
+    background:silver;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:10px;
+}
+.article .container > *:first-child{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:10px;
+    align-items: center;
+    grid-column: 1/ span 2;
+}
+.article .container > *:last-child{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:10px;
+    align-items: center;
+    grid-column: 2/ span 2;
+}
+/* footer */
+.footer{
+    padding: 20px;
+    background: #333;
+}
+.footer-info{
+    
+    text-align: center;
+    padding: 15px;
+    color:white;
+}
+.footer-info a{
+    color: white;
+}
+.footer .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+.footer .container>*:last-child{
+    grid-column: 1/ span 4;
+}
+.footer .container>*:nth-child(3) ul li{
+    padding: 5px;
+    color: white;
+    border-bottom: 1px solid grey;
+}
+
+.button{
+    display:block;
+    margin-top: 10px;
+    width: 100%;
+    padding: 5px;
+    background: var(--primary-color);
+}
+.footer .container>*:nth-child(2) input{
+    width: 100%;
+    padding: 5px;
+}
+.footer .container>*:last-child{
+    padding: 5px;
+}
+/* about */
+.about-container{
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-gap: 20px;
+    padding: 20px;
+}
+.about-container>*:first-child{
+    grid-row: 1/span 3;
+    text-align: center;
+    padding: 15px;
+}
+.about-container>*:last-child input{
+    background: #333;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+.about-container>*:last-child {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+/* article */
